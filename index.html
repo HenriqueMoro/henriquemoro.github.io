@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="http://necolas.github.io/normalize.css/3.0.1/normalize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Hnerique Moro</title>
+</head>
+<body  onload="blinker()">
+        <style>
+                p {
+                  margin: 0;
+                }
+                .titulo3{margin-top: 16px;}
+                input{
+                        background-color: transparent;
+                        border-style: none; 
+                        color:white;
+                        font-size: medium;
+                        margin-top: 16px;
+
+                        
+                        margin-top: auto;
+                        margin-bottom: auto;
+                }
+                
+                
+                input::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  a {
+  color:white;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.underline:hover {
+  color: white;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color:white;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.underline:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+#td{
+        font-size: medium;
+        text-align: center;
+}
+nav {
+        margin-top: 16px;
+}
+
+  
+        </style>
+        <p class='titulo-principal'> </p>
+        <p class='titulo2'></p>
+        <p class='titulo3' id="titulo4"></p>
+        
+
+                <table id="table"><tr><td id="td">
+                        $>
+                </td><td>
+                        <input id='textbox' type="text" placeholder="|" onkeypress="enviar()" >
+                </td></tr></table>
+                 
+        
+
+        <nav id="nav">
+                <a class='underline' onclick="about()" id="about">/about</a>
+                <a class='underline' onclick="skills()" id="skills">/skills</a>
+                <a class='underline'>/project</a>
+                <a class='underline' onclick="contact()">/contact</a>
+        </nav>
+        
+        <div id="div"> 
+                
+                <a class='up-icons'  href="https://github.com/HenriqueMoro" target="_blank"><img src="C:\Users\henri\OneDrive\Área de Trabalho\www\Hello World\personal-website\src\github-logo.svg" class="efects"></a>
+                <a  class='up-icons' href="https://www.facebook.com/henrique.moromaciel" target="_blank"><img src="C:\Users\henri\OneDrive\Área de Trabalho\www\Hello World\personal-website\src\facebook.svg" class="efects"></a>
+        
+                        <hr>
+        
+                <a  class="bot-icons" href="https://www.instagram.com/rick_moromaciel/" target="_blank"><img src="C:\Users\henri\OneDrive\Área de Trabalho\www\Hello World\personal-website\src\instagram.svg" class="efects"></a>
+                <a  class="bot-icons" href="https://twitter.com/rick_moromaciel" target="_blank"><img src="C:\Users\henri\OneDrive\Área de Trabalho\www\Hello World\personal-website\src\twitter.svg" class="efects"></a>
+          
+                <table border="0" id="table-icons">
+                        <tr class="efects">
+                                <td><a href="https://api.whatsapp.com/send?phone=5527999086368" target="_blank"><img src="C:\Users\henri\OneDrive\Área de Trabalho\www\Hello World\personal-website\src\whatsapp.svg" ></a></td><td><p>+55 (27) 999086368</p></td>
+                        </tr>
+                        <tr class="efects">
+                                <td><a href="mailto:henriquemm-123@hotmail.com" target="_blank"><img src="C:\Users\henri\OneDrive\Área de Trabalho\www\Hello World\personal-website\src\envelope.svg" ></a></td><td><p>henriquemm-123@hotmail.com</p></td>
+                        </tr>
+                      </table></div> 
+                      
+                      
+                   <div id="skills-div">
+                        <p id="um" ></p>
+                        <br>
+                        <p id='dois' class='topics'></p>
+                        <p id="tres" class='topics'>               </p>
+                        <p id="quatro" class='topics'>                </p>
+                        <p id="cinco" class='topics'>                </p>
+                        <p id="seis" class='topics'>                </p>
+                        <p id="sete" class='topics'>               </p>
+                        <br>
+                        <p id="oito" ></p>
+                        <br>
+                        <p id="nove" class='topics'>               </p>
+                        
+
+
+                   </div> 
+
+                   <div id="about-div">
+                        
+                            
+                        
+                                <img src='C:\Users\henri\OneDrive\Área de Trabalho\www\Hello World\personal-website\super.jpg' class='fadeIm'>
+                                <p id="titulo-principal"></p>
+                            </div>
+                   <p id="teste"></p>
+                   
+      
+        
+        
+        
+        
+       
+        
+       
+       
+
+       
+        
+        
+
+        
+                
+        <script type="text/javascript" src="C:\Users\henri\OneDrive\Área de Trabalho\www\Hello World\personal-website\skills.js"></script>
+        <script>
+           function typeWrite(){
+                
+                
+                document.getElementById('div').style.display = 'none' 
+                const titulo = document.querySelector('.titulo-principal'); 
+                
+                const titulo3 = document.querySelector('.titulo3')
+                
+                const textoArray = 'Welcome to Henrique Website Terminal! (v1.0.0)'.split('');
+                
+                
+                const textoArray3 = 'Documentation: type "help"'.split('');
+                titulo.innerHTML ='';
+                titulo2.innerHTML ='';
+                textoArray.forEach((letra,i)=>{
+                        setTimeout(function(){
+                                  titulo.innerHTML += letra;      
+                        },75 * i)
+                })
+                
+               
+
+                setTimeout(function(){
+                        textoArray3.forEach((letra,i)=>{
+                        setTimeout(function(){
+                                  titulo3.innerHTML += letra;      
+                        },75 * i)
+                })        
+                },5243)
+}
+
+document.getElementById('table').style.display='none'   
+document.getElementById('about-div').style.display='none'   
+document.getElementById('skills-div').style.display = 'none'   
+document.getElementById('div').style.display = 'none' 
+document.getElementById("nav").style.display = "none";
+const titulo2 = document.querySelector('.titulo2')
+typeWrite()
+function enviar(){
+        if (event.which === 13){
+        var input = document.getElementById('textbox')
+       if (input.value == 'help' ||"Help" || 'HELP'){menu()}
+}       
+
+}
+function menu(){
+        
+        document.getElementById("nav").style.display = "block"; 
+        document.getElementById('table').style.display = 'none'
+        document.getElementById('titulo4').style.display = 'none'  
+
+}
+function contact(){
+        document.getElementById('skills-div').style.display = 'none'   
+        document.getElementById('div').style.display = 'block' 
+        document.getElementById('about-div').style.display='none'
+}
+const um = document.getElementById('um')
+const dois= document.getElementById('dois')
+const tres= document.getElementById('tres')
+const quatro= document.getElementById('quatro')
+const cinco= document.getElementById('cinco')
+const seis= document.getElementById('seis')
+const sete= document.getElementById('sete')
+const oito= document.getElementById('oito')
+const nove= document.getElementById('nove')
+const array = 'Programming Languagens & Technologies:'.split(''); // 38
+const array1='> Javascript'.split('')
+const array2='> ReactJS'.split('')//9
+const array3='> NodeJS'.split('')//8   '> Python'.split('')//8   
+const array4= '> Python'.split('')//8
+const array5='> MySQL'.split('')//7
+const array6='> PHP'.split('')//5
+const array7='Natural Language:'.split('')//17
+const array8='> English (High intermediate)'.split('')//29
+
+function TypeWrite1(){
+
+
+
+
+//titulo principal
+array.forEach((letra,i)=>{
+    setTimeout(function(){
+              um.innerHTML += letra;      
+    },75 * i)
+})
+//Javascript
+setTimeout(function(){
+    array1.forEach((letra,i)=>{
+    setTimeout(function(){
+              dois.innerHTML += letra;      
+    },75 * i)
+})        
+},2973)
+//reactjs
+setTimeout(function(){
+    array2.forEach((letra,i)=>{
+    setTimeout(function(){
+              tres.innerHTML += letra;      
+    },75 * i)
+})        
+},3667)
+//nodejs
+setTimeout(function(){
+    array3.forEach((letra,i)=>{
+    setTimeout(function(){
+              quatro.innerHTML += letra;      
+    },75 * i)
+})        
+},4293)
+//python
+setTimeout(function(){
+    array4.forEach((letra,i)=>{
+    setTimeout(function(){
+              cinco.innerHTML += letra;      
+    },75 * i)
+})        
+},4919)
+//mysql
+setTimeout(function(){
+    array5.forEach((letra,i)=>{
+    setTimeout(function(){
+              seis.innerHTML += letra;      
+    },75 * i)
+})        
+},5466)
+//php
+setTimeout(function(){
+    array6.forEach((letra,i)=>{
+    setTimeout(function(){
+              sete.innerHTML += letra;      
+    },75 * i)
+})        
+},5857)
+//english title
+setTimeout(function(){
+    array7.forEach((letra,i)=>{
+    setTimeout(function(){
+              oito.innerHTML += letra;      
+    },75 * i)
+})        
+},7187)
+//english
+setTimeout(function(){
+    array8.forEach((letra,i)=>{
+    setTimeout(function(){
+              nove.innerHTML += letra;      
+    },75 * i)
+})        
+},9456)
+
+}
+
+function skills(){
+   
+
+    document.getElementById('skills-div').style.display='block'
+    document.getElementById('div').style.display = 'none'
+    document.getElementById('about-div').style.display='none' 
+    
+
+}
+
+function typeWrite2(){
+    const titulo = document.getElementById('titulo-principal');
+    const textoArray = 'The Beatles foi uma banda de rock inglesa formada em 1960 na cidade de Liverpool. Formada por John Lennon, Paul McCartney, George Harrison e Ringo Starr, é considerada a banda mais influente de todos os tempos. O grupo fez parte do desenvolvimento da contracultura da década de 1960 e do reconhecimento da música popular como forma de arte. Enraizados do skiffle, beat e rock and roll da década de 1950, seu som incorporava elementos da música clássica e pop tradicional de maneiras inovadoras; a banda mais tarde explorou estilos musicais que variavam de baladas e música indiana a psicodelia e hard rock.'.split('');
+    textoArray.forEach((letra,i)=>{
+                setTimeout(function(){
+                        titulo.innerHTML += letra;      
+                },75 * i)
+        }) }
+ function about(){
+    document.getElementById('skills-div').style.display='none'
+    document.getElementById('div').style.display = 'none'
+    document.getElementById('about-div').style.display='block'
+    
+ }       
+const skill = document.getElementById('skills')
+skill.addEventListener('click', function click(e){
+    TypeWrite1()
+    skill.removeEventListener('click',click);
+});
+const abouts = document.getElementById('about')
+abouts.addEventListener('click',function click2(e){
+    typeWrite2()
+    abouts.removeEventListener('click',click2)
+})
+
+
+function getDate(){
+    var data=new Date()
+    var dia=data.getDate();
+    var mes=data.getMonth() + 1;
+    var ano=data.getFullYear();
+   
+
+    var ampm =''
+    var hora = data.getHours();
+    var minutos = data.getMinutes()
+    var segundos = data.getSeconds()
+    
+
+    if (hora < 12){
+        ampm = 'AM'
+    }
+    else {
+        ampm = 'PM'
+    }
+    
+    if (segundos < 10){
+        segundos = '0' + segundos
+    }
+    if (minutos <10){
+        minutos = '0' + minutos
+    }
+    if (hora < 10){
+        hora = '0' + hora
+    }
+    if (dia <10){
+        dia = '0' + dia
+    }
+    if (mes <10){
+       mes = '0' + mes
+   }
+    
+
+    var dataFormatada = dia + '/' + mes + '/' + ano + ',' + ' ' +  hora + ':' + minutos + ':' + segundos +' ' + ampm;
+
+
+    const titulo2 = document.querySelector('.titulo2')
+    const textoArray2 = dataFormatada.split('');
+        setTimeout(function(){
+            textoArray2.forEach((letra,i)=>{
+            setTimeout(function(){
+                    titulo2.innerHTML += letra;      
+            },75 * i)
+    })        
+},3600)
+}
+
+setTimeout(function(){
+setInterval(function(){
+
+
+    
+        var data=new Date()
+        var dia=data.getDate();
+        var mes=data.getMonth() + 1;
+        var ano=data.getFullYear();
+   
+
+        var ampm =''
+        var hora = data.getHours();
+        var minutos = data.getMinutes()
+        var segundos = data.getSeconds()
+    
+
+     if (hora < 12){
+            ampm = 'AM'
+        }
+     else {
+            ampm = 'PM'
+     }
+    
+     if (segundos < 10){
+         segundos = '0' + segundos
+     }
+     if (minutos <10){
+         minutos = '0' + minutos
+     }
+     if (hora < 10){
+         hora = '0' + hora
+     }
+     if (dia <10){
+         dia = '0' + dia
+     }
+     if (mes <10){
+        mes = '0' + mes
+    }
+    
+
+        var dataFormatada = dia + '/' + mes + '/' + ano + ',' + ' ' +  hora + ':' + minutos + ':' + segundos +' ' + ampm;
+
+
+        const titulo2 = document.querySelector('.titulo2')
+        const teste = document.getElementById('teste')
+        titulo2.innerText = dataFormatada
+     },1000)
+
+    },5243)
+getDate()
+
+function blinker() {
+
+    if ($('input[type=text]').attr('placeholder')) {
+      // get the placeholder text
+      $('input[type=text]').attr('placeholder', '');
+    } else {
+      $('input[type=text]').attr('placeholder', '|');
+    }
+    
+    setTimeout(blinker, 500);
+    
+    }
+
+setTimeout(function(){
+   
+   document.getElementById('table').style.display='block'
+
+},7277)
+
+
+        </script>
+</body>
+</html>
