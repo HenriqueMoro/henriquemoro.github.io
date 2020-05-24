@@ -1,0 +1,114 @@
+body {
+    background-color: black;
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 2rem;
+    color: white;
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+  }
+  
+  ::selection {
+    background: #0080FF;
+    text-shadow: none;
+  }
+  
+  pre {
+    margin: 0;
+  }
+
+  p{
+      font-size: medium;
+      font-family:  'Inconsolata', monospace ;
+  }
+
+  p {
+    margin: 0;
+  }
+ 
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  
+.bot-icons{
+  margin-left: 5px;
+  
+}
+ #table-icons{
+  
+  text-align: left;
+   width: 400px;
+   margin-left: -400px;
+   position: relative;
+   margin-top: -112px;
+   left: 850px;
+   
+ }
+ .up-icons{
+   margin-left: 5px;
+ }
+ hr{
+   opacity: 0;
+   margin: 5px;
+ }
+ #div{
+   margin-top: 200px;
+   position: relative;
+   border: 0;
+   width: 150px;
+   left: 450px;
+   margin-right: 0px;
+ }
+
+ #skills-div{
+   max-width: 400px;
+   min-width: 200px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 130px;
+ }
+ .topics{
+   margin-left: 100px;
+   
+ }
+
+ .fadeIm {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+ border: 0;
+}
+#titulo-principal{
+text-align: center;
+max-width: 480px;
+margin: 60px auto;
+
+}
+
+.efects{
+  opacity: 0.8;
+}
+.efects:hover{
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+ 
