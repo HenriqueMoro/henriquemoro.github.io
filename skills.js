@@ -107,7 +107,8 @@ function skills(){
 
 function typeWrite2(){
     const titulo = document.getElementById('titulo-principal');
-    const textoArray = 'The Beatles foi uma banda de rock inglesa formada em 1960 na cidade de Liverpool. Formada por John Lennon, Paul McCartney, George Harrison e Ringo Starr, é considerada a banda mais influente de todos os tempos. O grupo fez parte do desenvolvimento da contracultura da década de 1960 e do reconhecimento da música popular como forma de arte. Enraizados do skiffle, beat e rock and roll da década de 1950, seu som incorporava elementos da música clássica e pop tradicional de maneiras inovadoras; a banda mais tarde explorou estilos musicais que variavam de baladas e música indiana a psicodelia e hard rock.'.split('');
+    const textoArray = 'Saudações, me chamo Henrique Moro atualmente estou cursando Ciencia da Computação na Universidade Vila Velha (UVV). Sou bastante curioso e sempre busco aprender coisas novas. Desejo expecializar com web developer.'.split(''); 
+
     textoArray.forEach((letra,i)=>{
                 setTimeout(function(){
                         titulo.innerHTML += letra;      
